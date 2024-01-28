@@ -109,15 +109,17 @@
       const status17 = document.querySelector(".status17");
       const status18 = document.querySelector(".status18");
       const status19 = document.querySelector(".status19");
-      const status20 = document.querySelector(".status20")
+      const status20 = document.querySelector(".status20");
+      const status21 = document.querySelector(".status21")
+      const status22 = document.querySelector(".status22")
 
       checkServerStatus("zentic.cc", status1);
       checkServerStatus("mc.arch.lol", status2);
       checkServerStatus("play.aeon-network.net", status3);
       checkServerStatus("legxndsmp.minecraft.pe", status4);
-      checkServerStatus("play.ggsmp.net", status5);
+      checkServerStatus("helltech.cc", status5);
       checkServerStatus("java.clever-teaching.com", status6);
-      checkServerStatus("", status7);
+      checkServerStatus("ricejava.neutine.net", status7);
       checkServerStatus("asianf4rmer.minecraft.pe", status8);
       checkServerStatus("play.verise.xyz", status9);
       checkServerStatus("pvpclub.xyz", status10);
@@ -131,6 +133,8 @@
       checkServerStatus("", status18);
       checkServerStatus("", status19);
       checkServerStatus("", status20);
+      checkServerStatus("mc.zyth.me", status21);
+      checkServerStatus("", status22);
 
       document.querySelector(".ip1").addEventListener("click", function () {
         copyIP("wss://zentic.cc");
@@ -192,6 +196,12 @@
       document.querySelector(".ip20").addEventListener("click", function() {
         copyIP("wss://mc.gmod9.com/wssconnect")
       })
+      document.querySelector(".ip21").addEventListener("click", function() {
+        copyIP("wss://mc.zyth.me")
+      })
+      document.querySelector(".ip22").addEventListener("click", function() {
+        copyIP("wss://proxy.theludos.com/")
+      })
     };
   </script>
 
@@ -200,6 +210,10 @@
 
   
   <div id="copyMessage" style="display: none;" class="notify">IP copied!</div>
+
+  <br>
+  <br>
+  <h1 class="cards__heading">1.8 Server List</h1>
 
   <div class="container">
     <div class="box box1">
@@ -227,15 +241,15 @@
       <div class="ip ip4" onclick="copyIP()">Copy IP</div>
     </div>
     <div class="box box5">
-      <div class="title title5">GGsmp</div>
+      <div class="title title5">Helltech</div>
       <div class="status status5"></div>
-      <div class="description description5">Survival, Factions, Duels</div>
+      <div class="description description5">GGsmp, LostPVP, Chess</div>
       <div class="ip ip5" onclick="copyIP()">Copy IP</div>
     </div>
     <div class="box box6">
       <div class="title title6">Clever Teaching</div>
       <div class="status status6"></div>
-      <div class="description description6">Survival</div>
+      <div class="description description6">Survival, Skyblock, Minigames, And More...</div>
       <div class="ip ip6" onclick="copyIP()">Copy IP</div>
     </div>
         <div class="box box7">
@@ -317,11 +331,27 @@
       <div class="ip ip19" onclick="copyIP()">Copy IP</div>
     </div>
     <div class="box box20">
-      <div class="title title20">Gmod9 anarchy</div>
+      <div class="title title2">Gmod9 anarchy</div>
       <div class="status status20"></div>
       <div class="description description20">Anarchy</div>
       <div class="ip ip20" onclick="copyIP()">Copy IP</div>
     </div>
+    <div class="box box21">
+      <div class="title title1">ZythMC</div>
+      <div class="status status21"></div>
+      <div class="description description21">Bedwars</div>
+      <div class="ip ip21" onclick="copyIP()">Copy IP</div>
+    </div>
+    <div class="box box22">
+      <div class="title title3">Ludos Proxy</div>
+      <div class="status status22"></div>
+      <div class="description description22">Proxy to join cracked java servers</div>
+      <div class="ip ip22" onclick="copyIP()">Copy IP</div>
+    </div>
+
+
+
+
 
   </div>
 
