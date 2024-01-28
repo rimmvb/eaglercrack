@@ -1,5 +1,5 @@
 services:
   - type: web
-    name: mathelpmepls1
+    name: craftycrafters
     env: docker
     plan: free
