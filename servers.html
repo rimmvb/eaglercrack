@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Everything eaglercraft."/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="EaglercrackX"/>
+    <meta name="twitter:description" content="Everything eaglercraft."/>
+    <meta name="twitter:image" content="/assets/favicon.ico"/>
+
+    <meta property="og:title" content="EaglercrackX"/>
+    <meta property="og:description" content="Everything eaglercraft."/>
+    <meta property="og:type" content="product"/>
+    <meta property="og:image" content="/assets/favicon.ico"/>
+    <meta property="og:url" content="/assets/favicon.ico"/>  
+    <!-- META -->
     <link rel="stylesheet" href="/style.css">
     <script src="https://cdn.jsdelivr.net/npm/mcstatus@5.1.4/dist/mcstatus.min.js"></script>
     <script src="https://kit.fontawesome.com/cb7290d6de.js" crossorigin="anonymous"></script>
@@ -11,7 +27,7 @@
 
     <nav class="nav">
       <div class="logo">
-          <img src="/assets/eaglercraft.jpg" alt="Logo">
+        <img src="/assets/eaglercrack.png" alt="Logo">
           <a href="/index.html"><h1>EaglercrackX</h1></a>
           
       </div>
@@ -112,6 +128,7 @@
       const status20 = document.querySelector(".status20");
       const status21 = document.querySelector(".status21")
       const status22 = document.querySelector(".status22")
+      const status23 = document.querySelector(".status23")
 
       checkServerStatus("zentic.cc", status1);
       checkServerStatus("mc.arch.lol", status2);
@@ -119,7 +136,7 @@
       checkServerStatus("legxndsmp.minecraft.pe", status4);
       checkServerStatus("helltech.cc", status5);
       checkServerStatus("java.clever-teaching.com", status6);
-      checkServerStatus("ricejava.neutine.net", status7);
+      checkServerStatus("play.ricenetwork.xyz", status7);
       checkServerStatus("asianf4rmer.minecraft.pe", status8);
       checkServerStatus("play.verise.xyz", status9);
       checkServerStatus("pvpclub.xyz", status10);
@@ -135,6 +152,7 @@
       checkServerStatus("", status20);
       checkServerStatus("mc.zyth.me", status21);
       checkServerStatus("", status22);
+      checkServerStatus("incog.invalid.work", status23);
 
       document.querySelector(".ip1").addEventListener("click", function () {
         copyIP("wss://zentic.cc");
@@ -155,7 +173,7 @@
         copyIP("wss://clever-teaching.com/web/");
       });
       document.querySelector(".ip7").addEventListener("click", function () {
-        copyIP("wss://ricenetwork.neutine.net/");
+        copyIP("wss://mc.ricenetwork.xyz");
       });
       document.querySelector(".ip8").addEventListener("click", function () {
         copyIP("wss://asianf4rmer.minecraft.pe");
@@ -202,6 +220,9 @@
       document.querySelector(".ip22").addEventListener("click", function() {
         copyIP("wss://proxy.theludos.com/")
       })
+      document.querySelector(".ip23").addEventListener("click", function() {
+        copyIP("wss://intelle.cloud/incog")
+      })
     };
   </script>
 
@@ -227,6 +248,12 @@
       <div class="status status2"></div>
       <div class="description description2">Survival, Bedwars, Kitpvp</div>
       <div class="ip ip2" onclick="copyIP()">Copy IP</div>
+    </div>
+    <div class="box box21">
+      <div class="title title1">ZythMC</div>
+      <div class="status status21"></div>
+      <div class="description description21">Bedwars</div>
+      <div class="ip ip21" onclick="copyIP()">Copy IP</div>
     </div>
     <div class="box box3">
       <div class="title title3">Aeon Network</div>
@@ -336,21 +363,18 @@
       <div class="description description20">Anarchy</div>
       <div class="ip ip20" onclick="copyIP()">Copy IP</div>
     </div>
-    <div class="box box21">
-      <div class="title title1">ZythMC</div>
-      <div class="status status21"></div>
-      <div class="description description21">Bedwars</div>
-      <div class="ip ip21" onclick="copyIP()">Copy IP</div>
-    </div>
     <div class="box box22">
       <div class="title title3">Ludos Proxy</div>
       <div class="status status22"></div>
       <div class="description description22">Proxy to join cracked java servers</div>
       <div class="ip ip22" onclick="copyIP()">Copy IP</div>
     </div>
-
-
-
+    <div class="box box23">
+      <div class="title title3">IncogMC</div>
+      <div class="status status23"></div>
+      <div class="description description23">Survival</div>
+      <div class="ip ip23" onclick="copyIP()">Copy IP</div>
+    </div>
 
 
   </div>
