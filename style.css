@@ -791,47 +791,95 @@ ul {
     color: white;
   }
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
 /* Credit END: w3schools most of it */
 
+.ServerBox {
+    position: relative;
+    height: 150px;
+    background-color: #333;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 24px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
 
+  .ServerBox img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 4px solid #aaa;
+    margin-right: 20px;
+    filter: brightness(0.8);
+  }
 
-  
-/* ngl this is from w3schools so ican hurry this up */
-.alert {
+.ServerCont {
+    width: 1000px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #f44336;
-    color: white;
   }
-  
-  .closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
+
+  .infoText {
+    display: block;
+    color: #fff;
+    align-items: center;
+  }
+
+  /* Credit CSS Scan */
+
+.button-3 {
+    appearance: none;
+    background-color: #1e1e1e;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
     cursor: pointer;
-    transition: 0.3s;
+    margin-block-start: 5px;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
   }
   
-  .closebtn:hover {
-    color: black;
+  .button-3:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-3:hover {
+    background-color: #101116;
+  }
+  
+  .button-3:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-3:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-3:active {
+    background-color: #1e1e1e;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
   }
 
-
-
-
-
+/* end because you don't got motion */

@@ -1,95 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- META -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="theme-color" content="#000000"/>
-    <meta name="description" content="Everything eaglercraft."/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- META -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Everything eaglercraft." />
 
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="EaglercrackX"/>
-    <meta name="twitter:description" content="Everything eaglercraft."/>
-    <meta name="twitter:image" content="../assets/favicon.ico"/>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="EaglercrackX" />
+  <meta name="twitter:description" content="Everything eaglercraft." />
+  <meta name="twitter:image" content="assets/favicon.ico" />
 
-    <meta property="og:title" content="EaglercrackX"/>
-    <meta property="og:description" content="Everything eaglercraft."/>
-    <meta property="og:type" content="product"/>
-    <meta property="og:image" content="../assets/favicon.ico"/>
-    <meta property="og:url" content="../assets/favicon.ico"/>  
-    <!-- META -->
-    <link rel="stylesheet" href="../style.css">
-    <script src="https://kit.fontawesome.com/cb7290d6de.js" crossorigin="anonymous"></script>
-    <title>EaglercrackX</title>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  <meta property="og:title" content="EaglercrackX" />
+  <meta property="og:description" content="Everything eaglercraft." />
+  <meta property="og:type" content="product" />
+  <meta property="og:image" content="assets/favicon.ico" />
+  <meta property="og:url" content="assets/favicon.ico" />
+  <meta name="google-adsense-account" content="ca-pub-5366090435459912">
+  <!-- META -->
+  <script type="text/javascript" src="/embed/embed.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="description" content="Eaglercrack: Everything eaglercraft.">
+  <script src="https://kit.fontawesome.com/cb7290d6de.js" crossorigin="anonymous"></script>
+  <title>EaglercrackX</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <nav class="nav">
+    <div class="logo">
+      <img src="/assets/eaglercrack.png" alt="Logo">
+      <a href="/index.html">
+        <h1>EaglercrackX</h1>
+      </a>
+    </div>
+    <div class="spacer"></div>
+    <ul class="navElements">
+      <li class="active">
+        <a href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
+      </li>
+      <li>
+        <a href="/clients.html"><i class="fa-solid fa-play"></i> Clients</a>
+      </li>
+      <li>
+        <a href="/servers.html"><i class="fa-solid fa-server"></i> Servers</a>
+      </li>
+      <li>
+        <a href="/packs.html"><i class="fa-solid fa-box"></i> Packs</a>
+      </li>
+      <li>
+        <a href="https://eaglercrack-archive.github.io"><i class="fa-solid fa-box-archive"></i> Archive</a>
+      </li>
+      <li>
+        <a href="/more.html"><i class="fa-solid fa-circle-question"></i> More...</a>
+      </li>
+    
+    </ul>
+
+    <div style="margin: 0 30px 0 0;">
+      <a class="button" href="https://discord.gg/qAbTAAv6dU">
+        <i class="fa-brands fa-discord"></i>&nbspJoin the Discord
+      </a>
+    </div>
+  </nav>
 </head>
 <body>
-    <nav class="nav">
-        <div class="logo">
-            <img src="../assets/eaglercrack.png" alt="Logo">
-            <a href="../index.html"><h1>EaglercrackX</h1></a>
+
+
+  <!-- SERVER LIST -->
+  <div class="ServerCont">
+    <div class="ServerBox">
+      <img src="/assets/archmc.gif">
+      <div>
+        <div class="title">ArchMC</div>
+        <div class="infoText">
+          <div><button class="button-3" role="button"><i class="fa-regular fa-clipboard"></i>&nbspCopy IP</button></div>
+          <div><button class="button-3" role="button"><i class="fa-regular fa-circle-question"></i>&nbspMore Info</button></div>
         </div>
-        <div class="spacer"></div>
-        <ul class="navElements">
-            <li class="active">
-                <a href="../index.html">Home</a>
-            </li>
-            <li>
-                <a href="../clients.html">Clients</a>
-            </li>
-            <li>
-                <a href="../servers.html">Servers</a>
-            </li>
-            <li>
-                <a href="../packs.html">Packs</a>
-            </li>
-            <li>
-                <a href="../more.html">More...</a>
-            </li>
-        </ul>
-        <div style="margin: 0 30px 0 0;">
-            <a class="button" href="https://discord.gg/qAbTAAv6dU">
-                <i class="fa-brands fa-discord"></i>&nbspJoin the Discord
-            </a>
-        </div>
-    </nav>
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>ALERT!</strong> JOIN THE DISCORD: THE DISCORD SERVER GOT NUKED: JOIN THE DISCORD: THE DISCORD SERVER GOT NUKED
       </div>
-    <br>
-    <br>
-    <br>
-    <h1 class="h1a">Eaglercraft server checker</h1>
-    <h1 class="h1d">(Add wss://)</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="inputContainer">
-        <input type="url" id="serverInput" onkeydown="if(event.key==='Enter') go()" size="25" class="inputText" autofocus>
-        <button onclick="go()" class="inputGo">Go</button>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="embed" class="server-embed"></div>
-
-    <script type="text/javascript" src="../servers/embed.js"></script>
-    <script type="text/javascript">
-        function go() {
-            // Clear existing content in the embed container
-            document.getElementById("embed").innerHTML = "";
-
-            var userInput = document.getElementById("serverInput").value;
-            new ServerEmbed(document.getElementById("embed"), "50%").ping(userInput);
-        }
-
-        window.addEventListener("load", () => {
-            go();
-        });
-    </script>
+      <script type="text/javascript">
+      window.addEventListener("load", () => {
+	    new ServerEmbed(document.getElementById("embed"), "100%").ping("wss://mc.arch.lol");
+      });
+      </script>
+      <div id="embed" class="embed"></div>  
+  </div>
+  <!-- SERVER LIST -->
 </body>
 </html>
