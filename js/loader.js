@@ -22,7 +22,15 @@
 	}
 
 	const IPFS_GATEWAYS = [
+		makePatternA("gateway.ipfs.io"),
 		makePatternB("4everland.io"),
+		makePatternB("dweb.link"),
+		makePatternA("cloudflare-ipfs.com"),
+		makePatternB("cf-ipfs.com"),
+		makePatternA("w3s.link"),
+		makePatternA("ipfs.eth.aragon.network"),
+		makePatternA("storry.tv"),
+		makePatternB("nftstorage.link")
 	];
 
 	function tryDecompressDownload(arrayBufferIn) {
