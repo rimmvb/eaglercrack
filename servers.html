@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- META -->
@@ -62,36 +62,32 @@
       </div>
     </nav>
 
-
   <script>
     window.onload = function () {
-      function checkServerStatus(ip, statusElement) {
-        if (!ip) {
+      function checkWebSocketStatus(url, statusElement) {
+        if (!url) {
           statusElement.innerHTML = "Status: <span style='color: #ffcc00;'>Unknown</span>";
           return;
         }
 
-        // Make a GET request to the mcstatus API
-        fetch(`https://api.mcstatus.io/v2/status/java/${ip}`)
-          .then(response => response.json())
-          .then(data => {
-            // Check if the server is online
-            if (data.online) {
-              statusElement.innerHTML = "Status: <span style='color: #00ff00;'>Online</span>";
-            } else {
-              statusElement.innerHTML = "Status: <span style='color: #ff0000;'>Offline</span>";
-            }
-          })
-          .catch(error => {
-            // Handle errors
-            console.error('Error checking server status:', error);
-          });
+        const ws = new WebSocket(url);
+
+        ws.onopen = function() {
+          statusElement.innerHTML = "Status: <span style='color: #00ff00;'>Online</span>";
+          ws.close();
+        };
+
+        ws.onerror = function() {
+          statusElement.innerHTML = "Status: <span style='color: #ff0000;'>Offline</span>";
+        };
+
+        ws.onclose = function() {
+          // Connection closed
+        };
       }
 
       function copyIP(ip) {
-        // Check if the IP is available
         if (ip) {
-          // Create a temporary textarea to copy the IP to the clipboard
           const tempInput = document.createElement('textarea');
           tempInput.value = ip;
           document.body.appendChild(tempInput);
@@ -99,7 +95,6 @@
           document.execCommand('copy');
           document.body.removeChild(tempInput);
 
-          // Display copy message
           const copyMessage = document.getElementById('copyMessage');
           copyMessage.style.display = 'block';
 
@@ -111,56 +106,37 @@
         }
       }
 
+      const servers = [
+        { ip: "wss://zentic.cc", status: ".status1" },
+        { ip: "wss://mc.arch.lol", status: ".status2" },
+        { ip: "wss://aeon-network.net/1.8", status: ".status3" },
+        { ip: "wss://vanillacraftsmp.us.to", status: ".status4" },
+        { ip: "wss://ggsmp.net/", status: ".status5" },
+        { ip: "wss://clever-teaching.com/web/", status: ".status6" },
+        { ip: "wss://mc.ricenetwork.xyz", status: ".status7" },
+        { ip: "wss://asianf4rmer.minecraft.pe", status: ".status8" },
+        { ip: "wss://verise.repl.co/", status: ".status9" },
+        { ip: "wss://play.pvpclub.xyz", status: ".status10" },
+        { ip: "wss://intelle.cloud/soccer", status: ".status11" },
+        { ip: "wss://mc.theludos.com", status: ".status12" },
+        { ip: "wss://savagelandsmc.com/", status: ".status13" },
+        { ip: "wss://mc.asspixel.net", status: ".status14" },
+        { ip: "wss://reading-gs.q13x.com", status: ".status15" },
+        { ip: "wss://sus.shhnowisnottheti.me", status: ".status16" },
+        { ip: "wss://ep.rufan.tech", status: ".status17" },
+        { ip: "wss://x.mess.eu.org/", status: ".status18" },
+        { ip: "wss://mcus1.dxomg.link", status: ".status19" },
+        { ip: "wss://mc.gmod9.com/wssconnect", status: ".status20" },
+        { ip: "wss://mc.zyth.me", status: ".status21" },
+        { ip: "wss://proxy.theludos.com/", status: ".status22" },
+        { ip: "wss://intelle.cloud/incog", status: ".status23" },
+        { ip: "wss://play.ragexwaternet.online", status: ".status24" }
+      ];
 
-      const status1 = document.querySelector(".status1");
-      const status2 = document.querySelector(".status2");
-      const status3 = document.querySelector(".status3");
-      const status4 = document.querySelector(".status4");
-      const status5 = document.querySelector(".status5");
-      const status6 = document.querySelector(".status6");
-      const status7 = document.querySelector(".status7");
-      const status8 = document.querySelector(".status8");
-      const status9 = document.querySelector(".status9");
-      const status10 = document.querySelector(".status10");
-      const status11 = document.querySelector(".status11");
-      const status12 = document.querySelector(".status12");
-      const status13 = document.querySelector(".status13");
-      const status14 = document.querySelector(".status14");
-      const status15 = document.querySelector(".status15");
-      const status16 = document.querySelector(".status16");
-      const status17 = document.querySelector(".status17");
-      const status18 = document.querySelector(".status18");
-      const status19 = document.querySelector(".status19");
-      const status20 = document.querySelector(".status20");
-      const status21 = document.querySelector(".status21")
-      const status22 = document.querySelector(".status22")
-      const status23 = document.querySelector(".status23")
-      const status24 = document.querySelector(".status24")
-
-      checkServerStatus("zentic.cc", status1);
-      checkServerStatus("mc.arch.lol", status2);
-      checkServerStatus("play.aeon-network.net", status3);
-      checkServerStatus("vanillacraftsmp.us.to", status4);
-      checkServerStatus("helltech.cc", status5);
-      checkServerStatus("java.clever-teaching.com", status6);
-      checkServerStatus("play.ricenetwork.xyz", status7);
-      checkServerStatus("asianf4rmer.minecraft.pe", status8);
-      checkServerStatus("play.verise.xyz", status9);
-      checkServerStatus("pvpclub.xyz", status10);
-      checkServerStatus("", status11);
-      checkServerStatus("", status12);
-      checkServerStatus("savagelandsmc.com", status13);
-      checkServerStatus("mc.asspixel.net", status14);
-      checkServerStatus("", status15);
-      checkServerStatus("sus.shhnowisnottheti.me", status16);
-      checkServerStatus("mc.rufan.tech", status17);
-      checkServerStatus("", status18);
-      checkServerStatus("", status19);
-      checkServerStatus("", status20);
-      checkServerStatus("mc.zyth.me", status21);
-      checkServerStatus("", status22);
-      checkServerStatus("incog.invalid.work", status23);
-      checkServerStatus("play.ragexwaternetwork.fun", status24);
+      servers.forEach(server => {
+        const statusElement = document.querySelector(server.status);
+        checkWebSocketStatus(server.ip, statusElement);
+      });
 
       document.querySelector(".ip1").addEventListener("click", function () {
         copyIP("wss://zentic.cc");
@@ -190,8 +166,8 @@
         copyIP("wss://verise.repl.co/");
       });
       document.querySelector(".ip10").addEventListener("click", function() {
-        copyIP("wss://play.pvpclub.xyz")
-      })
+        copyIP("wss://play.pvpclub.xyz");
+      });
       document.querySelector(".ip11").addEventListener("click", function () {
         copyIP("wss://intelle.cloud/soccer");
       });
@@ -216,27 +192,26 @@
       document.querySelector(".ip18").addEventListener("click", function () {
         copyIP("wss://x.mess.eu.org/");
       });
-      document.querySelector(".ip19").addEventListener("click", function() {
-        copyIP("wss://mcus1.dxomg.link")
-      })
-      document.querySelector(".ip20").addEventListener("click", function() {
-        copyIP("wss://mc.gmod9.com/wssconnect")
-      })
-      document.querySelector(".ip21").addEventListener("click", function() {
-        copyIP("wss://mc.zyth.me")
-      })
-      document.querySelector(".ip22").addEventListener("click", function() {
-        copyIP("wss://proxy.theludos.com/")
-      })
-      document.querySelector(".ip23").addEventListener("click", function() {
-        copyIP("wss://intelle.cloud/incog")
-      })
-      document.querySelector(".ip24").addEventListener("click", function() {
-        copyIP("wss://play.ragexwaternet.online")
-      })
+      document.querySelector(".ip19").addEventListener("click", function () {
+        copyIP("wss://mcus1.dxomg.link");
+      });
+      document.querySelector(".ip20").addEventListener("click", function () {
+        copyIP("wss://mc.gmod9.com/wssconnect");
+      });
+      document.querySelector(".ip21").addEventListener("click", function () {
+        copyIP("wss://mc.zyth.me");
+      });
+      document.querySelector(".ip22").addEventListener("click", function () {
+        copyIP("wss://proxy.theludos.com/");
+      });
+      document.querySelector(".ip23").addEventListener("click", function () {
+        copyIP("wss://intelle.cloud/incog");
+      });
+      document.querySelector(".ip24").addEventListener("click", function () {
+        copyIP("wss://play.ragexwaternet.online");
+      });
     };
   </script>
-
 </head>
 <body>
 
